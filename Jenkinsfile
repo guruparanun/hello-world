@@ -4,8 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh '''npm -v
-npm install'''
+        sh '''nvm install 6.9.5
+npm install
+npm run build'''
       }
     }
     stage('Test') {
