@@ -4,12 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
+        sh '''npm -v
+npm install'''
       }
     }
     stage('Test') {
       steps {
         echo 'Testing..'
-        sh 'npm -v'
+        sh 'jest bill_confirmed.spec'
       }
     }
     stage('Deploy') {
