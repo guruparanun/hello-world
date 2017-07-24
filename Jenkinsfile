@@ -4,8 +4,11 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh '''sh npm install;
-sh npm run build;'''
+        sh '''pwd
+ls
+
+npm install
+npm run build'''
       }
     }
     stage('Test') {
